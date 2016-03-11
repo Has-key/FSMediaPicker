@@ -45,7 +45,8 @@ UIKIT_EXTERN NSString const * UIImagePickerControllerCircularEditedImage;
 
 @property (assign, nonatomic) FSMediaType mediaType;
 @property (assign, nonatomic) FSEditMode  editMode;
-
+@property (assign, nonatomic) BOOL autoRotate;
+@property (assign, nonatomic) NSUInteger orientation;
 @property (assign, nonatomic) id<FSMediaPickerDelegate> delegate;
 
 @property (copy, nonatomic) void(^willPresentImagePickerBlock)(FSMediaPicker *mediaPicker, UIImagePickerController *imagePicker);

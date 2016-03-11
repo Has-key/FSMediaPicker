@@ -551,12 +551,12 @@ const char * mediaPickerKey;
 
 - (BOOL)shouldAutorotate
 {
-    return YES;
+    return self.mediaPicker.autoRotate;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscape;    // 横画面のみ
+    return self.mediaPicker.orientation;
 }
 
 @end
