@@ -45,9 +45,19 @@ NSString const * UIImagePickerControllerCircularEditedImage = @" UIImagePickerCo
 
 #pragma mark - Life Cycle
 
-- (instancetype)initWithDelegate:(id<FSMediaPickerDelegate>)delegate
+- (instancetype)init
 {
     self = [super init];
+    if (self) {
+        self.autoRotate = false;
+        self.orientation = UIInterfaceOrientationMaskPortrait;
+    }
+    return self;
+}
+
+- (instancetype)initWithDelegate:(id<FSMediaPickerDelegate>)delegate
+{
+    self = [self init];
     if (self) {
         self.delegate = delegate;
     }
@@ -549,6 +559,15 @@ const char * mediaPickerKey;
     return objc_getAssociatedObject(self, &mediaPickerKey);
 }
 
+- (BOOL)shouldAutorotate
+{
+    return self.mediaPicker.autoRotate;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return self.mediaPicker.orientation;
+}
 
 @end
 
