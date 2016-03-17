@@ -1,0 +1,12 @@
+/*
+  FSMediaPicker.strings
+  Pods
+
+  Created by KazuyaMIURA on 3/17/16.
+
+*/
+"Take photo" = "写真を撮る";
+"Select photo from photo library" = "フォトライブラリ";
+"Record video" = "動画を取る";
+"Select video from photo library" = "フォトライブラリ";
+"Cancel" = "キャンセル";
